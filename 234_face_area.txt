@@ -1,0 +1,31 @@
+Tuned parameters for different values of 'C' for each vessel
+
+#Face_Name	                           Area (cm^2)
+Left carotid                           0.340142
+Left subclavian	                       0.67868
+Aorta	                               4.44712
+Innominate	                           0.560735
+LVAD outflow	                       1.25868
+
+
+
+C = 0.1
+name,	r_p,	C,	,R_d,
+innominate	480.888810,0.000020,7400.691430
+L_carotid	1440.398714,0.000007,22167.175016
+L_subclavian	721.901484,0.000014,11109.782584
+aorta	103.047602,0.000095,1585.862449
+
+
+
+C = 0.2
+name,	r_p,	C,	,R_d,
+innominate	480.888810,0.000041,7400.691430
+L_carotid	1440.398714,0.000014,22167.175016
+L_subclavian	721.901484,0.000027,11109.782584
+aorta	103.047602,0.000190,1585.862449
+
+
+Pressures:   
+P_sys = 85.66666667 * MMHG_TO_CGS
+P_dia = 62.66666667 * MMHG_TO_CGS

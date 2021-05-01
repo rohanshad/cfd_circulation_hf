@@ -1,0 +1,73 @@
+#Format Version 1.0
+# General simulation parameters
+# -----------------------------------------------------
+Number of spatial dimensions: 3
+Number of time steps: 9000
+Time step size: 5e-4
+Continue previous simulation: 0
+Use pre-computed velocity: 1
+Velocity results file path: results.vtu
+First time step: 0
+Last time step: 9000
+Increment time step: 200
+Save results in a folder: 1
+Increment in saving restart files: 100
+Name prefix of saved files: result
+Increment in saving files: 100
+Start saving after time step: 1
+Save averaged results: 1
+Spectral radius of infinite time step: 0.2
+Searched file name to trigger stop: STOP_SIM
+Simulation requires remeshing: F
+Verbose: 1
+Warning: 1
+Debug: 0
+#----------------------------------------------------------------
+# Mesh data
+#--- You need to add all mesh entries under a "Add mesh" directive
+Add mesh: lumen {
+   Mesh file path (vtu):                                         mesh-complete/mesh-complete.mesh.vtu
+   Add face: inflow               { Face file path (vtp):  mesh-complete/mesh-surfaces/outflow.vtp }
+}
+
+
+
+#----------------------------------------------------------------
+# Equations
+
+Add equation: heatF {
+   Coupled: 0
+   Min iterations: 3
+   Max iterations: 10
+   Tolerance: 1D-4
+   Residual dB reduction: -40
+   Conductivity: 0.0
+   Initial Condition: 1D0
+
+
+   LS type: GMRES
+   {
+      Max iterations:      50
+      Tolerance:           1D-4
+      Krylov space dimension: 150
+   }
+  
+
+   Output: Spatial {
+      Temperature: t
+      Heat_flux: f
+   }
+
+
+
+################# IN/OUT BC
+   Add BC: inflow {
+     Type: Dirichlet
+      Time dependence: Steady
+      Value: 0D0
+      Profile: Flat 
+      Impose flux: 0
+   }
+
+
+}
