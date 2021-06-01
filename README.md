@@ -1,7 +1,7 @@
 # Accessory Scripts
 
-Code repository for accessory scripts for CFD and Aortic Incompetence in LVAD patients paper. 
-Published in Circulation Heart Failure: (add link here) 
+Code repository for accessory scripts for the paper "Patient-Specific Computational Fluid Dynamics Reveal Localized Flow Patterns Predictive of Post–LVAD Aortic Incompetence". 
+Coming soon in Circulation Heart Failure: 2021;14:e008034. DOI: 10.1161/CIRCHEARTFAILURE.120.008034
 
 <img width="2039" alt="Screen Shot 2021-05-05 at 12 42 56 PM" src="https://user-images.githubusercontent.com/12033026/117199756-6f153c00-ad9f-11eb-8d0d-7d55fc6b7cfc.png">
 
